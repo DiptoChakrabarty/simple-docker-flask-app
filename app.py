@@ -4,13 +4,13 @@ from flask_swagger_ui import get_swaggerui_blueprint
 
 app = Flask(__name__)
 SWAGGER_URL="/swagger"
-API_URL="/api/swagger.json"
+API_URL="/static/swagger.json"
 
 swagger_ui_blueprint = get_swaggerui_blueprint(
     SWAGGER_URL,
     API_URL,
     config={
-        'app_name': 'Flask API'
+        'app_name': 'Access API'
     }
 )
 app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
@@ -24,6 +24,7 @@ def home():
 @app.route("/access",methods=["POST"])
 def access():
     data = request.get_json()
+    print(data)
     name = data.get("name", "dipto")
     server = data.get("server","server1")
 
