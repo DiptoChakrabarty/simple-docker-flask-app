@@ -1,4 +1,4 @@
-from flask import Flask,jsonify
+from flask import Flask,jsonify,request
 
 app = Flask(__name__)
 
@@ -6,6 +6,18 @@ app = Flask(__name__)
 def home():
     return jsonify({
         "Message": "app up and running successfully"
+    })
+
+@app.route("/access")
+def access():
+    data = request.get_json()
+    name = data.get("name", "dipto")
+    server = data.get("server","server1")
+
+    message = f"User {name} received access to server {server}"
+
+    return jsonify({
+        "Message": message
     })
 
 
