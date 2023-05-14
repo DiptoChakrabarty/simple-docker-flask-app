@@ -1,6 +1,10 @@
 # Simple-docker-flask-app
 
-## Steps to run
+## Steps to run in docker
+
+- [Link over here](https://diptochakrabarty.medium.com/build-and-deploy-flask-app-using-docker-13b592830a26)
+
+## Steps to run using python
 
 - Setup virtual env
 - RUN pip3 install -r requirements.txt
