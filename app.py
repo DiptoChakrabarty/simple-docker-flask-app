@@ -1,7 +1,19 @@
 from crypt import methods
 from flask import Flask,jsonify,request
+from flask_swagger_ui import get_swaggerui_blueprint
 
 app = Flask(__name__)
+SWAGGER_URL="/swagger"
+API_URL="/api/swagger.json"
+
+swagger_ui_blueprint = get_swaggerui_blueprint(
+    SWAGGER_URL,
+    API_URL,
+    config={
+        'app_name': 'Flask API'
+    }
+)
+app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
 
 @app.route("/")
 def home():
