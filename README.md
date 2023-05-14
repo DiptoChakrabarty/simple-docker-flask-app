@@ -1,4 +1,5 @@
 # Simple-docker-flask-app
+![image](https://github.com/DiptoChakrabarty/simple-docker-flask-app/blob/main/static/dockerflask.jpeg)
 
 ## Steps to run in docker
 
