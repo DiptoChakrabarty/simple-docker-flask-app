@@ -2,7 +2,8 @@
 
 ## Steps to run in docker
 
-- [Link over here](https://diptochakrabarty.medium.com/build-and-deploy-flask-app-using-docker-13b592830a26)
+- [Link for running flask api in docker over here](https://diptochakrabarty.medium.com/build-and-deploy-flask-app-using-docker-13b592830a26)
+- [Link for adding swagger to flask api over here](https://diptochakrabarty.medium.com/flask-python-swagger-for-rest-apis-6efdf0100bd7)
 
 ## Steps to run using python
 
