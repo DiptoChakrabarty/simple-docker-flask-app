@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import Flask,jsonify,request
 
 app = Flask(__name__)
@@ -8,7 +9,7 @@ def home():
         "Message": "app up and running successfully"
     })
 
-@app.route("/access")
+@app.route("/access",methods=["POST"])
 def access():
     data = request.get_json()
     name = data.get("name", "dipto")
